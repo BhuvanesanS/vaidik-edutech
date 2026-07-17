@@ -73,7 +73,10 @@ export const Contact: React.FC = () => {
     >
       <div className="container">
         {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+        <div
+          className="reveal"
+          style={{ textAlign: "center", marginBottom: "4rem" }}
+        >
           <h1
             className="font-serif text-gold-gradient"
             style={{
@@ -105,6 +108,7 @@ export const Contact: React.FC = () => {
         >
           {/* LEFT: Contact details info cards */}
           <div
+            className="reveal-left"
             style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
           >
             {/* Address */}
@@ -314,7 +318,7 @@ export const Contact: React.FC = () => {
 
           {/* RIGHT: Contact input Form */}
           <div
-            className="glass-card"
+            className="glass-card reveal-right"
             style={{
               border: "1px solid var(--gold-border)",
               padding: "2.5rem 2rem",

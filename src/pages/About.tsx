@@ -108,7 +108,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
             "linear-gradient(180deg, rgba(197,160,89,0.03) 0%, transparent 100%)",
         }}
       >
-        <div className="container" style={{ maxWidth: "800px" }}>
+        <div className="container reveal" style={{ maxWidth: "800px" }}>
           <div
             style={{
               display: "inline-flex",
@@ -189,7 +189,10 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
         }}
       >
         <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+          <div
+            className="reveal"
+            style={{ textAlign: "center", marginBottom: "4rem" }}
+          >
             <h2
               className="font-serif text-gold-gradient"
               style={{
@@ -214,6 +217,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
           </div>
 
           <div
+            className="reveal-zoom"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
@@ -269,7 +273,10 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
       {/* 3. HOW IT WORKS (5 STEPS) */}
       <section className="section-padding">
         <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "5rem" }}>
+          <div
+            className="reveal"
+            style={{ textAlign: "center", marginBottom: "5rem" }}
+          >
             <h2
               className="font-serif text-gold-gradient"
               style={{
@@ -294,6 +301,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
           </div>
 
           <div
+            className="reveal-zoom"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
@@ -358,7 +366,10 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
         }}
       >
         <div className="container" style={{ maxWidth: "850px" }}>
-          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+          <div
+            className="reveal"
+            style={{ textAlign: "center", marginBottom: "4rem" }}
+          >
             <h2
               className="font-serif text-gold-gradient"
               style={{
@@ -375,7 +386,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
             </p>
           </div>
 
-          <div>
+          <div className="reveal">
             {faqs.map((faq, idx) => {
               const isOpen = openFaqIndex === idx;
               return (
@@ -425,7 +436,10 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
           </div>
 
           {/* FAQ Footer CTA */}
-          <div style={{ textAlign: "center", marginTop: "3rem" }}>
+          <div
+            className="reveal-zoom"
+            style={{ textAlign: "center", marginTop: "3rem" }}
+          >
             <p
               style={{
                 color: "var(--text-secondary)",

@@ -90,7 +90,10 @@ export const VerifyCertificate: React.FC = () => {
     >
       <div className="container" style={{ maxWidth: "850px" }}>
         {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
+        <div
+          className="reveal"
+          style={{ textAlign: "center", marginBottom: "3.5rem" }}
+        >
           <h1
             className="font-serif text-gold-gradient"
             style={{
@@ -117,7 +120,7 @@ export const VerifyCertificate: React.FC = () => {
         {/* Input Panel if not yet successfully verified */}
         {validationResult !== "success" && (
           <div
-            className="glass-card"
+            className="glass-card reveal-zoom"
             style={{
               maxWidth: "520px",
               margin: "0 auto",

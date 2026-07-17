@@ -79,7 +79,10 @@ export const Placements: React.FC = () => {
     >
       <div className="container">
         {/* Page Header */}
-        <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+        <div
+          className="reveal"
+          style={{ textAlign: "center", marginBottom: "4rem" }}
+        >
           <h1
             className="font-serif text-gold-gradient"
             style={{
@@ -105,6 +108,7 @@ export const Placements: React.FC = () => {
 
         {/* Metrics Grid */}
         <div
+          className="reveal-zoom"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
@@ -148,7 +152,7 @@ export const Placements: React.FC = () => {
         </div>
 
         {/* Placement Support features */}
-        <div style={{ marginBottom: "5rem" }}>
+        <div className="reveal" style={{ marginBottom: "5rem" }}>
           <h2
             className="font-serif text-gold-gradient"
             style={{
@@ -218,6 +222,7 @@ export const Placements: React.FC = () => {
 
         {/* Hiring Partners Logo Grid */}
         <div
+          className="reveal-zoom"
           style={{
             backgroundColor: "var(--bg-secondary)",
             border: "1px solid var(--gold-border)",
@@ -276,7 +281,7 @@ export const Placements: React.FC = () => {
         </div>
 
         {/* Success Stories Testimonials */}
-        <div>
+        <div className="reveal">
           <h2
             className="font-serif text-gold-gradient"
             style={{

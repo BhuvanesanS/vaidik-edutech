@@ -96,6 +96,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenLeadModal }) => {
       >
         <div className="container">
           <div
+            className="reveal"
             style={{
               maxWidth: "750px",
               display: "flex",
@@ -191,6 +192,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenLeadModal }) => {
       >
         <div className="container">
           <div
+            className="reveal-zoom"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
@@ -256,7 +258,10 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenLeadModal }) => {
       {/* 3. WHY UPSKILLING MATTERS */}
       <section className="section-padding">
         <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+          <div
+            className="reveal"
+            style={{ textAlign: "center", marginBottom: "4rem" }}
+          >
             <h2
               className="font-serif text-gold-gradient"
               style={{
@@ -282,6 +287,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenLeadModal }) => {
           </div>
 
           <div
+            className="reveal"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
@@ -360,7 +366,10 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenLeadModal }) => {
         }}
       >
         <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+          <div
+            className="reveal"
+            style={{ textAlign: "center", marginBottom: "4rem" }}
+          >
             <h2
               className="font-serif text-gold-gradient"
               style={{
@@ -386,6 +395,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenLeadModal }) => {
           </div>
 
           <div
+            className="reveal"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
@@ -540,7 +550,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenLeadModal }) => {
         style={{ position: "relative", overflow: "hidden" }}
       >
         <div
-          className="container"
+          className="container reveal-zoom"
           style={{
             background: "var(--gold-gradient)",
             color: "#000",

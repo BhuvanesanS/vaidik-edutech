@@ -74,6 +74,33 @@ export default function App() {
     }
   }, []);
 
+  // Intersection Observer for scroll reveal animations
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px -40px",
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-active");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      const revealElements = document.querySelectorAll(
+        ".reveal, .reveal-left, .reveal-right, .reveal-zoom",
+      );
+      revealElements.forEach((el) => observer.observe(el));
+    }, 150);
+
+    return () => clearTimeout(timer);
+  }, [currentPage]);
+
   const navigateTo = (pageId: string) => {
     if (pageId === "home") {
       window.location.hash = "#/";

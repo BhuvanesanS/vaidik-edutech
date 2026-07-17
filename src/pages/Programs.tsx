@@ -30,7 +30,10 @@ export const Programs: React.FC<ProgramsProps> = ({
     >
       <div className="container">
         {/* Page Header */}
-        <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
+        <div
+          className="reveal"
+          style={{ textAlign: "center", marginBottom: "3.5rem" }}
+        >
           <h1
             className="font-serif text-gold-gradient"
             style={{
@@ -56,7 +59,7 @@ export const Programs: React.FC<ProgramsProps> = ({
 
         {/* Categories Tab Navigation */}
         <div
-          className="categories-tabs"
+          className="categories-tabs reveal"
           style={{
             display: "flex",
             flexWrap: "wrap",
@@ -125,6 +128,7 @@ export const Programs: React.FC<ProgramsProps> = ({
         {/* Filtered Courses Grid */}
         {filteredCourses.length > 0 ? (
           <div
+            className="reveal-zoom"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
