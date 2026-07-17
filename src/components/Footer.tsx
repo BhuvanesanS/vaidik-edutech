@@ -54,7 +54,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 lineHeight: "1.6",
               }}
             >
-              VAIDHIK EDUTECH PVT LTD is a premium career-acceleration platform
+              Vaidhik EduTech Pvt Ltd is a premium career-acceleration platform
               bridging the gap between academic education and standard
               engineering/corporate sectors.
             </p>
@@ -373,7 +373,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           }}
         >
           <div style={{ color: "var(--text-muted)", fontSize: "0.82rem" }}>
-            &copy; {currentYear} VAIDHIK EDUTECH PVT LTD. All Rights Reserved.
+            &copy; {currentYear} Vaidhik EduTech Pvt Ltd. All Rights Reserved.
           </div>
           <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
             {["Privacy Policy", "Terms of Service", "Refund Policy"].map(

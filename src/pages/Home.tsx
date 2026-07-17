@@ -147,10 +147,10 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenLeadModal }) => {
                 margin: 0,
               }}
             >
-              VAIDHIK EDUTECH delivers high-end professional certifications
-              across CSE, ECE, Mechanical, Civil, Aeronautical, Commerce, and
-              Biological domains. Master production-ready tools with certified
-              experts.
+              Vaidhik EduTech Pvt Ltd is a pioneer in the Ed-Tech industry,
+              providing valuable and quality education. We deliver high-end
+              professional certifications across CSE, ECE & EEE, Mechanical,
+              Civil, Management, and Bio Science domains.
             </p>
 
             {/* Action Buttons */}

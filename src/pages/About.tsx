@@ -55,7 +55,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
     {
       number: "04",
       title: "Get Certified",
-      desc: "Earn your Vaidhik Edutech Professional Certification to validate your technical capability.",
+      desc: "Earn your Vaidhik EduTech Professional Certification to validate your technical capability.",
     },
     {
       number: "05",
@@ -75,7 +75,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
     },
     {
       q: "Are these certifications globally recognized?",
-      a: "Yes. Vaidhik Edutech certifications are verified, globally traceable, and recognized by corporate companies. They serve as verified proof of hands-on project competency.",
+      a: "Yes. Vaidhik EduTech certifications are verified, globally traceable, and recognized by corporate companies. They serve as verified proof of hands-on project competency.",
     },
     {
       q: "Can I change my learning pacing or mode after enrolling?",
@@ -143,13 +143,39 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
               color: "var(--text-secondary)",
               fontSize: "1.05rem",
               lineHeight: "1.7",
+              marginBottom: "2rem",
             }}
           >
-            Vaidhik Edutech is a premium career-acceleration institute. We help
-            engineering, commerce, and biological sciences students acquire
-            practical, production-level expertise using certified training
-            methods and corporate mentorship.
+            Vaidhik EduTech Pvt Ltd is a pioneer in the Ed-Tech industry, the
+            fastest-growing professional training platform in the country. As
+            part of our initiative for educating the upcoming generations to be
+            producers of technology, we provide meaningful projects, collaborate
+            with experienced professionals, provide mentorship and guidance.
           </p>
+          <div
+            style={{
+              marginTop: "1.5rem",
+              padding: "1rem 2rem",
+              backgroundColor: "var(--gold-overlay)",
+              border: "1px solid var(--gold-border)",
+              borderRadius: "6px",
+              display: "inline-block",
+              maxWidth: "600px",
+            }}
+          >
+            <p
+              style={{
+                color: "var(--text-primary)",
+                fontSize: "0.95rem",
+                fontWeight: "600",
+                margin: 0,
+                lineHeight: "1.5",
+              }}
+            >
+              🎯 <span className="text-gold">Our Aim:</span> Our main Aim is to
+              provide the Valuable and Quality education for the students.
+            </p>
+          </div>
         </div>
       </section>
 

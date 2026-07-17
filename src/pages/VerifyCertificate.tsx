@@ -284,7 +284,7 @@ export const VerifyCertificate: React.FC = () => {
               <span>
                 <strong>Verification Confirmed:</strong> Certification
                 registration found. Issued by{" "}
-                <strong>Vaidhik Edutech Private Limited</strong>.
+                <strong>Vaidhik EduTech Pvt Ltd</strong>.
               </span>
             </div>
 
@@ -392,6 +392,8 @@ export const VerifyCertificate: React.FC = () => {
               <div
                 style={{
                   display: "flex",
+                  flexWrap: "wrap",
+                  gap: "2rem",
                   justifyContent: "space-between",
                   alignItems: "flex-end",
                   marginTop: "4rem",
@@ -458,7 +460,7 @@ export const VerifyCertificate: React.FC = () => {
                       fontWeight: "bold",
                     }}
                   >
-                    Vaidhik Edutech
+                    Vaidhik EduTech Pvt Ltd
                   </div>
                   <div
                     style={{
