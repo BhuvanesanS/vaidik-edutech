@@ -314,6 +314,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenLeadModal }) => {
                   gap: "1rem",
                 }}
               >
+                <div className="glass-card-header-accent" />
                 <div
                   style={{
                     display: "flex",
@@ -405,14 +406,15 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onOpenLeadModal }) => {
                       : "1px solid var(--gold-border)",
                   backgroundColor:
                     path.badge === "Most Popular"
-                      ? "rgba(197, 160, 89, 0.03)"
-                      : "var(--bg-secondary)",
+                      ? "var(--gold-overlay)"
+                      : "rgba(12, 12, 14, 0.6)",
                   boxShadow:
                     path.badge === "Most Popular"
-                      ? "0 10px 30px rgba(197, 160, 89, 0.1)"
+                      ? "0 10px 30px rgba(212, 175, 55, 0.15)"
                       : "none",
                 }}
               >
+                <div className="glass-card-header-accent" />
                 {/* Path Badge */}
                 <div
                   style={{

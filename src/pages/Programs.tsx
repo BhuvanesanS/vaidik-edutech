@@ -142,6 +142,7 @@ export const Programs: React.FC<ProgramsProps> = ({
                   height: "100%",
                 }}
               >
+                <div className="glass-card-header-accent" />
                 {/* Card Header: Category + Rating */}
                 <div
                   style={{

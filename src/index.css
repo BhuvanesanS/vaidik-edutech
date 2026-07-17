@@ -2,15 +2,15 @@
 
 :root {
   /* Premium Dark Theme */
-  --bg-primary: #050505;
-  --bg-secondary: #0d0d0f;
-  --bg-tertiary: #141417;
+  --bg-primary: #060608;
+  --bg-secondary: #0c0c0e;
+  --bg-tertiary: #121215;
 
   /* Metallic Gold Palette */
-  --gold-primary: #c5a059;
-  --gold-light: #f3e5ab;
-  --gold-dark: #8c6d31;
-  --gold-glowing: #ffd700;
+  --gold-primary: #d4af37; /* Standard classic gold */
+  --gold-light: #f9e8a2;
+  --gold-dark: #aa7c11;
+  --gold-glowing: #ffdf00;
   --gold-gradient: linear-gradient(
     135deg,
     #bf953f 0%,
@@ -27,14 +27,14 @@
     #fcf6ba 75%,
     #bf953f 100%
   );
-  --gold-overlay: rgba(197, 160, 89, 0.1);
-  --gold-border: rgba(197, 160, 89, 0.2);
-  --gold-border-focus: rgba(197, 160, 89, 0.6);
+  --gold-overlay: rgba(212, 175, 55, 0.08);
+  --gold-border: rgba(212, 175, 55, 0.18);
+  --gold-border-focus: rgba(212, 175, 55, 0.6);
 
   /* Typography & Colors */
   --text-primary: #ffffff;
-  --text-secondary: #a3a3ac;
-  --text-muted: #666670;
+  --text-secondary: #a0a0aa;
+  --text-muted: #6b7280;
   --success: #10b981;
   --error: #ef4444;
 
@@ -43,8 +43,8 @@
   --font-sans: "Poppins", sans-serif;
 
   /* Transitions */
-  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Reset & Global */
@@ -61,6 +61,23 @@ html {
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-primary);
+  background-image:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(212, 175, 55, 0.04) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(212, 175, 55, 0.02) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(6, 6, 8, 1) 0%,
+      rgba(2, 2, 3, 1) 100%
+    );
+  background-attachment: fixed;
   color: var(--text-primary);
   overflow-x: hidden;
   line-height: 1.6;
@@ -178,12 +195,15 @@ textarea {
 
 /* Glass Panels & Cards */
 .glass-card {
-  background: var(--bg-secondary);
+  background: rgba(12, 12, 14, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--gold-border);
-  border-radius: 8px;
-  padding: 2rem;
+  border-radius: 12px;
+  padding: 2.25rem 2rem;
   transition: var(--transition-smooth);
   position: relative;
+  overflow: hidden;
 }
 
 .glass-card::before {
@@ -194,18 +214,21 @@ textarea {
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.02) 0%,
+    135deg,
+    rgba(255, 255, 255, 0.03) 0%,
     transparent 100%
   );
-  border-radius: 8px;
+  border-radius: 12px;
   pointer-events: none;
 }
 
 .glass-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
   border-color: var(--gold-primary);
-  box-shadow: 0 10px 30px rgba(197, 160, 89, 0.08);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(212, 175, 55, 0.12),
+    0 0 1px rgba(212, 175, 55, 0.3) inset;
 }
 
 /* Accordions for Syllabus & FAQ */
@@ -299,4 +322,59 @@ textarea {
   .section-padding {
     padding: 3.5rem 0;
   }
+}
+
+/* Premium Gold Divider */
+.gold-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--gold-border) 20%,
+    var(--gold-primary) 50%,
+    var(--gold-border) 80%,
+    transparent 100%
+  );
+  margin: 4rem auto;
+  max-width: 90%;
+}
+
+/* Subtle Shimmer Card Animation */
+.glass-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 45%,
+    rgba(255, 223, 0, 0.03) 50%,
+    transparent 55%
+  );
+  transform: rotate(45deg) translate(-100%, -100%);
+  transition: transform 0.8s ease;
+  pointer-events: none;
+}
+
+.glass-card:hover::after {
+  transform: rotate(45deg) translate(100%, 100%);
+}
+
+/* Card Header Accent Line */
+.glass-card-header-accent {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: var(--gold-gradient);
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.glass-card:hover .glass-card-header-accent {
+  opacity: 1;
 }
